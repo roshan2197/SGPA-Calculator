@@ -65,8 +65,7 @@
             0 0 200px #03e9f4;
     }
 
-    #res p,
-    a {
+    #res p{
         font-weight: 800;
         margin-top: 50%;
         text-align: center;
@@ -74,18 +73,6 @@
         color: aqua;
     }
 
-    #res a {
-        text-align: center;
-        padding: 10px;
-        text-decoration: none;
-        color: rgb(0, 0, 0);
-        border-radius: 10px;
-    }
-
-    #res a:hover {
-        box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
-            0 0 200px #03e9f4;
-    }
 </style>
 
 <body>
@@ -145,7 +132,6 @@
     </div>
     <div id="res">
         <p id="ans"></p>
-        <a href="https://roshan2197.github.io/SGPA-Calculator/" id="a" onclick="document.getElementById('sound').pause();"></a>
     </div>
     <audio id="sound">
         <source src="win-sound.wav">
@@ -177,8 +163,7 @@
 
         document.getElementById('container').style.display = "none";
         document.getElementById('ans').innerHTML = "SGPA : "+result;
-        document.getElementById('a').innerHTML = "Try Again";
-        document.getElementById('a').style.background = "aqua";
+
 
     }
 </script>
