@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGPA</title>
+</head>
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        background-color: rgb(0, 255, 255);
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    input[type="text"] {
+        cursor: pointer;
+        outline: none;
+        height: 50px;
+        width: 50px;
+        font-size: 40px;
+        text-align: center;
+        margin: 3px 10px;
+        border-radius: 10px;
+        background-color: rgb(0, 255, 255);
+    }
+
+    .p {
+        font-size: 20px;
+        font-weight: 600;
+        color: rgb(154, 243, 236);
+        border-radius: 10px;
+        padding: 0px !important;
+    }
+
+    button {
+        border: none;
+        margin: 30px 0px;
+        position: relative;
+        font-size: 40px;
+        justify-content: center;
+        display: flex;
+        left: 25%;
+        right: 25%;
+        color: black;
+        background-color: aqua;
+        border-radius: 10px;
+        outline: none;
+    }
+
+    button:hover {
+        cursor: pointer;
+        box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+            0 0 200px #03e9f4;
+    }
+
+    #res p,
+    a {
+        font-weight: 800;
+        margin-top: 50%;
+        text-align: center;
+        font-size: 50px;
+        color: aqua;
+    }
+
+    #res a {
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        border-radius: 10px;
+    }
+
+    #res a:hover {
+        box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+            0 0 200px #03e9f4;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <h1>SGPA CALCULATOR</h1>
+        <table>
+            <tr>
+                <td class="p">Grade Points</td>
+                <td><input type="text" id="grd1" maxlength="2"></td>
+                <td class="p">Credits</td>
+                <td><input type="text" id="cred1" maxlength="1"></td>
+            </tr>
+            <tr>
+                <td class="p">Grade Points</td>
+                <td><input type="text" id="grd2" maxlength="2"></td>
+                <td class="p">Credits</td>
+                <td><input type="text" id="cred2" maxlength="1"></td>
+            </tr>
+            <tr>
+                <td class="p">Grade Points</td>
+                <td><input type="text" id="grd3" maxlength="2"></td>
+                <td class="p">Credits</td>
+                <td><input type="text" id="cred3" maxlength="1"></td>
+            </tr>
+            <tr>
+                <td class="p">Grade Points</td>
+                <td><input type="text" id="grd4" maxlength="2"></td>
+                <td class="p">Credits</td>
+                <td><input type="text" id="cred4" maxlength="1"></td>
+            </tr>
+            <tr>
+                <td class="p">Grade Points</td>
+                <td><input type="text" id="grd5" maxlength="2"></td>
+                <td class="p">Credits</td>
+                <td><input type="text" id="cred5" maxlength="1"></td>
+            </tr>
+            <tr>
+                <td class="p">Grade Points</td>
+                <td><input type="text" id="grd6" maxlength="2"></td>
+                <td class="p">Credits</td>
+                <td><input type="text" id="cred6" maxlength="1"></td>
+            </tr>
+            <tr>
+                <td class="p">Grade Points</td>
+                <td><input type="text" id="grd7" maxlength="2"></td>
+                <td class="p">Credits</td>
+                <td><input type="text" id="cred7" maxlength="1"></td>
+            </tr>
+            <tr>
+                <td class="p">Grade Points</td>
+                <td><input type="text" id="grd8" maxlength="2"></td>
+                <td class="p">Credits</td>
+                <td><input type="text" id="cred8" maxlength="1"></td>
+            </tr>
+        </table>
+        <button type="submit" onclick="cal(); document.getElementById('sound').play();">submit</button>
+    </div>
+    <div id="res">
+        <p id="ans"></p>
+        <a href="https://roshan2197.github.io/SGPA-Calculator/" id="a" onclick="document.getElementById('sound').pause();"></a>
+    </div>
+    <audio id="sound">
+        <source src="win-sound.wav">
+    </audio>
+</body>
+<script>
+    function cal() {
+
+        var g1 = document.getElementById('grd1').value;
+        var g2 = document.getElementById('grd2').value;
+        var g3 = document.getElementById('grd3').value;
+        var g4 = document.getElementById('grd4').value;
+        var g5 = document.getElementById('grd5').value;
+        var g6 = document.getElementById('grd6').value;
+        var g7 = document.getElementById('grd7').value;
+        var g8 = document.getElementById('grd8').value;
+
+        var c1 = parseInt(document.getElementById('cred1').value);
+        var c2 = parseInt(document.getElementById('cred2').value);
+        var c3 = parseInt(document.getElementById('cred3').value);
+        var c4 = parseInt(document.getElementById('cred4').value);
+        var c5 = parseInt(document.getElementById('cred5').value);
+        var c6 = parseInt(document.getElementById('cred6').value);
+        var c7 = parseInt(document.getElementById('cred7').value);
+        var c8 = parseInt(document.getElementById('cred8').value);
+
+
+        var result = (((g1 * c1) + (g2 * c2) + (g3 * c3) + (g4 * c4) + (g5 * c5) + (g6 * c6) + (g7 * c7) + (g8 * c8)) / (c1 + c2 + c3 + c4 + c5 + c6 + c7 + c8)).toFixed(3);
+
+        document.getElementById('container').style.display = "none";
+        document.getElementById('ans').innerHTML = "SGPA : "+result;
+        document.getElementById('a').innerHTML = "Try Again";
+        document.getElementById('a').style.background = "aqua";
+
+    }
+</script>
+
+</html>
